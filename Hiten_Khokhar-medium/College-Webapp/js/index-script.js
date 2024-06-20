@@ -16,12 +16,12 @@ const gridItems = document.querySelectorAll('.grid-item');
                 entries.forEach(entry => {
                     if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
                         if (entry.target.classList.contains('grid-item-3')) {
-                            handleGridItemAnimation(entry.target, 'fade-left'); // Fade-left animation for third item
+                            handleGridItemAnimation(entry.target, 'fade-left');
                         } else {
-                            handleGridItemAnimation(entry.target, 'fade-up'); // Fade-up animation for other items
+                            handleGridItemAnimation(entry.target, 'fade-up'); 
                         }
                     } else {
-                        handleGridItemAnimation(entry.target, 'fade-down'); // Make items invisible when not in view
+                        handleGridItemAnimation(entry.target, 'fade-down'); 
                     }
                 });
             }, observerOptions);
@@ -95,41 +95,41 @@ const gridItems = document.querySelectorAll('.grid-item');
             var containerPosition = imageContainer.getBoundingClientRect();
             var scrollPosition = window.scrollY || window.pageYOffset;
 
-            // Calculate the bottom position of the image container
+           
             var containerBottom = containerPosition.top + imageContainer.clientHeight;
 
-            // Check if the bottom of the image container is within the viewport
+            
             if (containerPosition.top < window.innerHeight && containerBottom > 0) {
-                // Calculate the percentage of scroll progress relative to the image container
+                
                 var scrollPercentage = (window.innerHeight - containerPosition.top) / (window.innerHeight + imageContainer.clientHeight);
                 
-                // Limit scrollPercentage between 0 and 1
+               
                 scrollPercentage = Math.min(Math.max(scrollPercentage, 0), 1);
 
-                // Calculate the initial and final angles
-                var initialAngle = 70; // Initial rotation angle in degrees
-                var finalAngle = 0; // Final rotation angle in degrees
+                
+                var initialAngle = 70;
+                var finalAngle = 0;
 
-                // Calculate the current angle based on scrollPercentage
+                
                 var angle = initialAngle + (finalAngle - initialAngle) * (2*scrollPercentage);
 
                 if(angle > finalAngle){
                 image.style.transform = 'rotateX(' + angle + 'deg)';
-                 // Show the image container
+                 
                 }
                 else{
                     var oangle = -angle;
                     image.style.transform = 'rotateX(' + oangle + 'deg)';
                 }
-                // Set scrolledToOriginal to true once the final angle is reached
+                
                 if (scrollPercentage >= 1 && !scrolledToOriginal) {
                     scrolledToOriginal = true;
                 }
 
-                // Check if the final angle has been reached and prevent further rotation
+                
                 
             } else {
-                // If scrolled out of view, reset opacity and rotation
+                
                 image.style.transform = 'rotateX(' + initialAngle + 'deg)';
                 scrolledToOriginal = false;
                 finalAngleReached = false;
@@ -152,7 +152,7 @@ const gridItems = document.querySelectorAll('.grid-item');
             progressBar.style.width = scrollPercentage + '%';
 
             shapes.forEach(shape => {
-                const speed = shape.dataset.speed || 1; // Default speed is 1 if not set
+                const speed = shape.dataset.speed || 1; 
                 const movement = cardScroll.scrollLeft * speed;
                 shape.style.transform = `translateX(${movement}px)`;
             });
@@ -168,23 +168,23 @@ const gridItems = document.querySelectorAll('.grid-item');
                     cardScroll.scrollLeft = 0;
                     
                 }
-            }, 2800); // Interval in milliseconds
+            }, 2800);
         }
 
-        // Pause auto scrolling on hover
+        
         cardScroll.addEventListener('mouseover', () => {
             clearInterval(scrollInterval);
         });
 
-        // Resume auto scrolling on mouseout
+        
         cardScroll.addEventListener('mouseout', () => {
             startAutoScroll();
         });
 
-        // Initial call to start auto scrolling
+        
         startAutoScroll();
 
-        // Update progress bar and shapes on manual scroll
+        
         cardScroll.addEventListener('scroll', () => {
             updateProgress();
         });

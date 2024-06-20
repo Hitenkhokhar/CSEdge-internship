@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department LDCE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        .head {
+            border-bottom: 3px solid blue;
+            padding-bottom: 20px;
+        }
+
+        .ldheader {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: fit-content;
+            width: fit-content;
+        }
+
+        .logo img {
+            height: calc(60px + (90 - 20)*(100vw - 320px)/(1920 - 320));
+            width: calc(60px + (90 - 20)*(100vw - 320px)/(1920 - 320));
+        }
+
+        .ldname {
+            font-size: calc(15px + (40 - 10)*(100vw - 320px)/(1920 - 320));
+            height: fit-content;
+            width: fit-content;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+
+
+        .loc {
+            font-size: 15px;
+            font-weight: none;
+        }
+
+        .headline-nav a {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #00008b;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: calc(15px + (10 - 5)*(100vw - 320px)/(1920 - 320));
+            border-bottom: 4px solid #00008b;
+        }
+
+        .headline-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .headline1 {
+            width: fit-content;
+            color: #00008b;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            border-bottom: 4px solid #00008b;
+        }
+
+        .content {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            padding: 20px;
+            border-left: 3px solid #00008b;
+        }
+
+        .image-kasturbhai {
+            max-width: calc(250px + (750 - 400)*(100vw - 320px)/(1920 - 320));
+        }
+
+        .fit-image {
+            min-width: fit-content;
+            height: auto;
+        }
+
+        .fit-hight {
+            height: auto;
+        }
+
+        .image-chemical-eng {
+            max-width: 250px;
+        }
+
+        .image-block {
+            display: block;
+            width: fit-content;
+        }
+
+        .col-sm-3 .card img {
+            max-width: 150px;
+        }
+
+        .col-sm-3 .card {
+            align-items: center;
+            min-width: fit-content;
+            margin-top: 10px;
+        }
+
+        .block-hidden {
+            display: none;
+        }
+
+        .footer{
+    background-color: black;
+    color: white;
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.card-footer .card-title{
+    border-bottom: 2px solid white;
+}
+
+/* social Icons */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .icon {
+    text-decoration: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    /* background-color: hsla(209 20% 70% / 20%); */ /* For dark theme */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 5px 10px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+  
+  .icon > i {
+    color: #2dd4bf;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+  }
+  
+  .icon:hover > i {
+    scale: 1.2;
+    color: #f1f1f1;
+  }
+  
+  .icon:before {
+    background: var(--color);
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+  }
+  
+  .icon:hover:before {
+    animation: slide 0.7s forwards;
+  }
+  
+  @keyframes slide {
+    50% {
+      left: 10%;
+      top: -40%;
+    }
+  
+    100% {
+      left: -15%;
+      top: -15%;
+    }
+  }
+  
+  .icon:has(.fa-instagram) {
+    --color: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+  }
+  .icon:has(.fa-linkedin-in) {
+    --color: #0077b5;
+  }
+  .icon:has(.fa-youtube) {
+    --color: #ff0000;
+  }
+  .icon:has(.fa-x-twitter) {
+    --color: #1da1f2;
+  }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="ldheader container text-center">
+            <div class="logo"><img src="../resources/ldlogo.png"></div>
+            <div class="ldname">L.D. College of Engineering
+                <div class="loc">Ahemedabad, Gujarat, India</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container text-centre">
+        <div class="row">
+            <div class="headline-nav col-md-2"></div>
+            <div class="headline-nav col-md-2">
+                <a href="index.html">Home</a>
+            </div>
+
+
+            <div class="headline-nav col-md-2">
+                <a href="ldce-faculty.html" style="text-decoration: none;" target="_blank">
+                    Faculty</a>
+            </div>
+            </a>
+
+            <div class="headline-nav phy col-md-2">
+                <a href="ldce-departments.html" target="_blank" style="text-decoration: none;">
+                    Department</a>
+            </div>
+
+            <div class="headline-nav dig col-md-2">
+                <a href="ldce-activity.html" target="_blank" style="text-decoration: none;">
+                    Activity</a>
+            </div>
+            <div class="headline-nav time col-md-2">
+                <a href="ldce-cources.html" target="_blank" style="text-decoration: none;">
+                    Courses</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="headline1">LDCE Principal office</div>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-4 fit-image">
+                    <div class="image-block">
+                        <img src="../resources/image-ldce-office.jpg" alt="Principal Office image"
+                            class="image-kasturbhai">
+                        <div class="text-center">Principal Office</div>
+                    </div>
+                </div>
+                <div class="col fit-hight">
+                    The Office of L.D. College typically refers to the administrative hub of L.D. College of
+                    Engineering, an esteemed institution located in Ahmedabad, India. Established in 1948, L.D. College
+                    of Engineering (Lalbhai Dalpatbhai College of Engineering) is one of the oldest engineering colleges
+                    in Gujarat and holds a prominent place in the educational landscape of India.
+                </div>
+            </div>
+        </div>
+
+        <div class="headline1">Applied Mechanics</div>
+        <div class="content">
+            <div class="row">
+                <div class="col fit-hight">
+                    The Department of Applied Mechanics is a vital offshoot of Civil Engineering Program at L .D
+                    .College of Engineering. Applied Mechanics department has a distinguished and technically
+                    well-versed faculty imbued with a sense of commitment and sincerity. As the HOD of the department it
+                    is a matter of immense pride to bring to you the multifaceted activities and achievements of the
+                    department. We are a department of 16 faculty members, 2 of these holding Doctorates, 7 of these are
+                    pursuing Doctorate of Philosophy and the rest have a Master’s Degree.
+                </div>
+                <div class="col-sm-4 fit-image">
+                    <div class="image-block">
+                        <img src="../resources/departments/applied-mechanics.jpeg" alt="Principal Office image"
+                            class="image-kasturbhai">
+                        <div class="text-center">Applied Mechanics</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headline1">Computer Engineering</div>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-4 fit-image">
+                    <div class="image-block">
+                        <img src="../resources/departments/computer-engineering.jpeg" alt="Principal Office image"
+                            class="image-kasturbhai">
+                        <div class="text-center">Computer Engineering</div>
+                    </div>
+                </div>
+                <div class="col fit-hight">
+                    Computer engineering is the fastest developing discipline in the world. It integrates several fields
+                    of electrical engineering and computer science required to develop computer hardware and software.
+                    Computer engineers embed computers in other machines and systems, build networks to transfer data
+                    and develop ways to make computers, faster, smaller and more capable. The major technical areas of
+                    Computer Engineering are : Cybersecurity, Networking, Database Handling, Artificial Intelligence,
+                    Design Automation, Computer software, Embedded Systems.
+                </div>
+            </div>
+        </div>
+        <div class="headline1">Information Technology</div>
+        <div class="content">
+            <div class="row">
+                <div class="col fit-hight">
+                    To shape the young minds of aspiring Information Technology engineers to become the front runner in
+                    the sustainable technological growth of our country, conserving its rich cultural heritage and
+                    catering to its socioeconomic needs.
+                    <br>
+                    1. Bringing innovative approach in teaching-learning process to produce competent
+                    Information Technology engineers. 2. Provide opportunities and necessary exposure to the young
+                    engineers to develop themselves into responsible professionals. 3. Infusing lifelong learning
+                    ability in the aspiring minds with the view of making them sensible towards their social
+                    responsibilities.
+                </div>
+                <div class="col-sm-4 fit-image">
+                    <div class="image-block">
+                        <img src="../resources/departments/information-technology.jpg" alt="Principal Office image"
+                            class="image-kasturbhai">
+                        <div class="text-center">Information Technology</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headline1">Mechanical Engineering</div>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-4 fit-image">
+                    <div class="image-block">
+                        <img src="../resources/departments/mechanical-engineering.jpeg" alt="Principal Office image"
+                            class="image-kasturbhai">
+                        <div class="text-center">Mechanical Engineering</div>
+                    </div>
+                </div>
+                <div class="col fit-hight">
+                    Mechanical Engineering encompasses areas such as energy, fluid mechanics, dynamics, combustion,
+                    vibration, design, manufacturing processes, systems modeling and simulation, mechatronics, robotics,
+                    mechanics of material, rapid prototyping and composites. It deals with all aspects of the conversion
+                    of thermal energy into useful work and the machines that make this possible. Mechanical engineering
+                    is also referred to as the ‘mother’ of all engineering branches.</div>
+            </div>
+        </div>
+    </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card card-footer">
+                            <div class="card-title">
+                               <h4>Quick Links</h4>
+                            </div>
+                            <div class="card-text">
+                                <a href="https://acpc.gujarat.gov.in/" target="_blank">ACPC Admission</a><br>
+                                <a href="https://www.gtu.ac.in/" target="_blank">Gujarat Technological University</a><br>
+                                <a href="https://nss.gov.in/" target="_blank">National Service Scheme</a><br>
+                                <a href="https://study.gujarat.gov.in/Home/University" target="_blank">Study in Gujarat</a><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card card-footer">
+                            <div class="card-title">
+                                <h4>About</h4>
+                            </div>
+                            <div class="card-text">
+                                <a target="_blank" href="ldce-foundation.html">Heritage / History</a><br>
+                                <a target="_blank" href="ldce-activity.html">Activities / Festivities</a><br>
+                                <a target="_blank" href="ldce-faculty.html">Professors</a><br>
+                                <a target="_blank" href="ldce-foundation.html">Enterance</a><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card card-footer">
+                            <div class="card-title">
+                               <h4> Other</h4>
+                            </div>
+                            <div class="card-text">
+                                <a href="https://www.google.com/maps/place/L.D.+College+Of+Engineering/@23.0338,72.5440091,17z/data=!3m1!4b1!4m6!3m5!1s0x395e84eaf57ac615:0x5c7498bb96b34c97!8m2!3d23.0338!4d72.546584!16zL20vMGMxd180?entry=ttu" target="_blank">
+                                    Google Location</a><br>
+                                <a href="https://ldce.ac.in/upload/pdf/aarambh/c_Apply%20for%20Financial%20Assistant%20from%20LDCE%20SSIP.pdf" target="_blank">SSIP</a><br>
+                                <a href="https://www.digitalgujarat.gov.in/" target="_blank">Scholership</a><br>
+                                <a href="https://www.youtube.com/watch?v=zYE1-fi5fdo" target="_blank">Campus Tour</a><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card card-footer">
+                            <div class="card-title">
+                               <h4> Contect US</h4>
+                            </div>
+                            <div class="card-text" id="contact">
+                                <P> L.D. College of Engineering<br>
+                                    Opp Gujarat University,<br>
+                                    Navrangpura, Ahmedabad - 380015.<br>
+                                    GUJARAT INDIA</P>
+                                    <div class="wrapper">
+                                        <a href="https://www.instagram.com/ldceofficial/" class="icon"><i class="fa-brands fa-instagram"><img src="../resources/logo-social/instagram-removebg-preview.png" style="height: 20px;"></i></a>
+                                        <a href="https://in.linkedin.com/school/l.d-college-of-engineering---ahmedabad/" class="icon"><i class="fa-brands fa-linkedin-in"><img src="../resources/logo-social/linkedin-removebg-preview.png" style="height: 20px;"></i></a>
+                                        <a href="https://www.youtube.com/c/LDCollegeofEngineering/videos" class="icon"><i class="fa-brands fa-youtube"><img src="../resources/logo-social/youtube-removebg-preview.png" style="height: 20px;"></i></a>
+                                        <a href="https://www.facebook.com/ldce.ac.in" class="icon"><i class="fa-brands fa-x-twitter"><img src="../resources/logo-social/facebook-removebg-preview.png" style="height: 20px;"></i></a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="../js/feculty-script.js"></script>
+</body>
+
+</html>

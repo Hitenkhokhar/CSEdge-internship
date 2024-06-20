@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feculty LDCE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        .head {
+            border-bottom: 3px solid blue;
+            padding-bottom: 20px;
+        }
+
+        .ldheader {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: fit-content;
+            width: fit-content;
+        }
+
+        .logo img {
+            height: calc(60px + (90 - 20)*(100vw - 320px)/(1920 - 320));
+            width: calc(60px + (90 - 20)*(100vw - 320px)/(1920 - 320));
+        }
+
+        .ldname {
+            font-size: calc(15px + (40 - 10)*(100vw - 320px)/(1920 - 320));
+            height: fit-content;
+            width: fit-content;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+
+
+        .loc {
+            font-size: 15px;
+            font-weight: none;
+        }
+
+        .headline-nav a {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #00008b;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: calc(15px + (10 - 5)*(100vw - 320px)/(1920 - 320));
+            border-bottom: 4px solid #00008b;
+        }
+
+        .headline-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .headline1 {
+            width: fit-content;
+            color: #00008b;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            border-bottom: 4px solid #00008b;
+        }
+
+        .content {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            padding: 20px;
+            border-left: 3px solid #00008b;
+        }
+
+        .image-kasturbhai {
+            max-width: 170px;
+        }
+
+        .fit-image {
+            min-width: fit-content;
+            height: auto;
+        }
+
+        .fit-hight {
+            height: auto;
+        }
+
+        .image-chemical-eng {
+            max-width: 250px;
+        }
+
+        .image-block {
+            display: block;
+            width: fit-content;
+        }
+
+        .col-sm-3 .card img {
+            max-width: 150px;
+        }
+
+        .col-sm-3 .card {
+            align-items: center;
+            min-width: fit-content;
+            margin-top: 10px;
+        }
+
+        .block-hidden {
+            display: none;
+        }
+
+        .footer{
+    background-color: black;
+    color: white;
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.card-footer .card-title{
+    border-bottom: 2px solid white;
+}
+
+/* social Icons */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .icon {
+    text-decoration: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    /* background-color: hsla(209 20% 70% / 20%); */ /* For dark theme */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 5px 10px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+  
+  .icon > i {
+    color: #2dd4bf;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+  }
+  
+  .icon:hover > i {
+    scale: 1.2;
+    color: #f1f1f1;
+  }
+  
+  .icon:before {
+    background: var(--color);
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+  }
+  
+  .icon:hover:before {
+    animation: slide 0.7s forwards;
+  }
+  
+  @keyframes slide {
+    50% {
+      left: 10%;
+      top: -40%;
+    }
+  
+    100% {
+      left: -15%;
+      top: -15%;
+    }
+  }
+  
+  .icon:has(.fa-instagram) {
+    --color: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+  }
+  .icon:has(.fa-linkedin-in) {
+    --color: #0077b5;
+  }
+  .icon:has(.fa-youtube) {
+    --color: #ff0000;
+  }
+  .icon:has(.fa-x-twitter) {
+    --color: #1da1f2;
+  }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="ldheader container text-center">
+            <div class="logo"><img src="../resources/ldlogo.png"></div>
+            <div class="ldname">L.D. College of Engineering
+                <div class="loc">Ahemedabad, Gujarat, India</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container text-centre">
+        <div class="row">
+            <div class="headline-nav col-md-2"></div>
+            <div class="headline-nav col-md-2">
+                <a href="index.html">Home</a>
+            </div>
+
+
+            <div class="headline-nav col-md-2">
+                <a href="ldce-faculty.html" style="text-decoration: none;" target="_blank">
+                    Faculty</a>
+            </div>
+            </a>
+
+            <div class="headline-nav phy col-md-2">
+                <a href="ldce-departments.html" target="_blank" style="text-decoration: none;">
+                    Department</a>
+            </div>
+
+            <div class="headline-nav dig col-md-2">
+                <a href="ldce-activity.html" target="_blank" style="text-decoration: none;">
+                    Activity</a>
+            </div>
+            <div class="headline-nav time col-md-2">
+                <a href="ldce-cources.html" target="_blank" style="text-decoration: none;">
+                    Courses</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="headline1">L.D. College Principal</div>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-2 fit-image">
+                    <div class="image-block">
+                        <img src="../resources/feculty/dr. nilay sir.png" alt="Principal image" class="image-kasturbhai">
+                        <div class="text-center">Principal</div>
+                    </div>
+                </div>
+                <div class="col fit-hight">
+                    Dr. Nilay N. Bhuptani brings a wealth of experience and a strong academic background to his role as
+                    Principal at LD College of Engineering. With an illustrious career spanning various leadership
+                    positions in academia and government, Dr. Bhuptani has played a pivotal role in shaping the
+                    landscape of technical education in Gujarat. His tenure as Principal at Vishvakarma Government
+                    Engineering College and his contributions as Joint Director of Technical Education for the
+                    Government of Gujarat underscore his commitment to excellence and innovation in higher education.
+                </div>
+            </div>
+        </div>
+
+        <div class="headline1">Heads of Department</div>
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div class="card">
+                        <img src="../resources/feculty/Chirag S.-Thaker-chirag.thakar-ce.jpeg" class="card-img-top"
+                            alt="Computer Engineering head">
+                        <div class="card-body">
+                            <h5 class="card-title">Mr. Chirag S. Thaker</h5>
+                            <p class="card-text">H.O.D Computer Engineering</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../resources/feculty/Hiteishi-Diwanji-head-it.jpg" class="card-img-top"
+                            alt="Computer Engineering head">
+                        <div class="card-body">
+                            <h5 class="card-title">Ms. Hiteishi Diwanji</h5>
+                            <p class="card-text">H.O.D Information Technology</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div class="card">
+                        <img src="../resources/feculty/Rajesh-Jain-drrajesh.jain-civil.jpg" class="card-img-top"
+                            alt="Computer Engineering head">
+                        <div class="card-body">
+                            <h5 class="card-title">Mr. Rajesh Jain</h5>
+                            <p class="card-text">H.O.D Civil Engineering</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="../resources/feculty/Vikramkumar-Patel-mechanical.jpg" class="card-img-top"
+                            alt="Computer Engineering head">
+                        <div class="card-body">
+                            <h5 class="card-title">Vikramkumar Patel</h5>
+                            <p class="card-text">H.O.D Mechanical Engineering</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block-hidden" >
+                <div class="row">
+                    <div class="col-sm-3 mb-3 mb-sm-0">
+                        <div class="card">
+                            <img src="../resources/feculty/CHANDULAL-VITHALANI-ec-eng.png" class="card-img-top"
+                                alt="Computer Engineering head">
+                            <div class="card-body">
+                                <h5 class="card-title">CHANDULAL VITHALANI</h5>
+                                <p class="card-text">H.O.D Electronics and Communication Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img src="../resources/feculty/Manish-Thakker-Biomedical-eng.png" class="card-img-top"
+                                alt="Computer Engineering head">
+                            <div class="card-body">
+                                <h5 class="card-title">Manish Thakker</h5>
+                                <p class="card-text">H.O.D Biomedical Engineering</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mb-3 mb-sm-0">
+                        <div class="card">
+                            <img src="../resources/feculty/Paresh-Rana-chemical-eng.jpg" class="card-img-top"
+                                alt="Computer Engineering head">
+                            <div class="card-body">
+                                <h5 class="card-title">Paresh Rana</h5>
+                                <p class="card-text">H.O.D Chemical Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img src="../resources/feculty/Gaurang-Ban-Environmental-eng.png" class="card-img-top"
+                                alt="Computer Engineering head">
+                            <div class="card-body">
+                                <h5 class="card-title">Gaurang Ban</h5>
+                                <p class="card-text">H.O.D Environmental Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <div class="card">
+                                <img src="../resources/feculty/Manish-Thakker-head-ic.jpeg" class="card-img-top"
+                                    alt="Computer Engineering head">
+                                <div class="card-body">
+                                    <h5 class="card-title">Manish Thakker</h5>
+                                    <p class="card-text">H.O.D Instumental and Control Engineering</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <img src="../resources/feculty/KETAN-BADGUJAR-Electrical-eng.jpg" class="card-img-top"
+                                    alt="Computer Engineering head">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ketan Badgujar</h5>
+                                    <p class="card-text">H.O.D Electrical Engineering</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 mb-3 mb-sm-0">
+                            <div class="card">
+                                <img src="../resources/feculty/Major Chaitanya-Sanghvi-applied-mechanics-hod.jpg"
+                                    class="card-img-top" alt="Computer Engineering head">
+                                <div class="card-body">
+                                    <h5 class="card-title">Major Chaitanya Sanghvi</h5>
+                                    <p class="card-text">H.O.D Applied Mechanics</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <img src="../resources/feculty/Rajendrakumar-Jani-automobile-eng.jpg" class="card-img-top"
+                                    alt="Computer Engineering head">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rajendrakumar Jani</h5>
+                                    <p class="card-text">H.O.D Automobile Engineering</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="display:flex ;align-items: center; justify-content: center;">
+                <button  class="btn btn-primary" id="display-all">See all</button>
+            </div>
+
+        </div>
+
+        <div class="headline1">Feculty of LDCE</div>
+            <div class="content">
+                <p>
+                    Faculty of LDCE is a team of highly qualified and experienced professionals who are dedicated to imparting knowledge
+                    and skills to the students. Our faculty members are experts in their respective fields and have a strong
+                    research background. They are committed to providing a supportive and stimulating learning environment that
+                    fosters intellectual growth and development of our students.
+                    <a href="https://ldce.ac.in/upload/pdf/legal/LDCE-Faculty-Staff-List.pdf" target="_blank">see List</a>
+                </p>
+            </div>
+    </div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card card-footer">
+                                <div class="card-title">
+                                   <h4>Quick Links</h4>
+                                </div>
+                                <div class="card-text">
+                                    <a href="https://acpc.gujarat.gov.in/" target="_blank">ACPC Admission</a><br>
+                                    <a href="https://www.gtu.ac.in/" target="_blank">Gujarat Technological University</a><br>
+                                    <a href="https://nss.gov.in/" target="_blank">National Service Scheme</a><br>
+                                    <a href="https://study.gujarat.gov.in/Home/University" target="_blank">Study in Gujarat</a><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card card-footer">
+                                <div class="card-title">
+                                    <h4>About</h4>
+                                </div>
+                                <div class="card-text">
+                                    <a target="_blank" href="ldce-foundation.html">Heritage / History</a><br>
+                                    <a target="_blank" href="ldce-activity.html">Activities / Festivities</a><br>
+                                    <a target="_blank" href="ldce-faculty.html">Professors</a><br>
+                                    <a target="_blank" href="ldce-foundation.html">Enterance</a><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card card-footer">
+                                <div class="card-title">
+                                   <h4> Other</h4>
+                                </div>
+                                <div class="card-text">
+                                    <a href="https://www.google.com/maps/place/L.D.+College+Of+Engineering/@23.0338,72.5440091,17z/data=!3m1!4b1!4m6!3m5!1s0x395e84eaf57ac615:0x5c7498bb96b34c97!8m2!3d23.0338!4d72.546584!16zL20vMGMxd180?entry=ttu" target="_blank">
+                                        Google Location</a><br>
+                                    <a href="https://ldce.ac.in/upload/pdf/aarambh/c_Apply%20for%20Financial%20Assistant%20from%20LDCE%20SSIP.pdf" target="_blank">SSIP</a><br>
+                                    <a href="https://www.digitalgujarat.gov.in/" target="_blank">Scholership</a><br>
+                                    <a href="https://www.youtube.com/watch?v=zYE1-fi5fdo" target="_blank">Campus Tour</a><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card card-footer">
+                                <div class="card-title">
+                                   <h4> Contect US</h4>
+                                </div>
+                                <div class="card-text" id="contact">
+                                    <P> L.D. College of Engineering<br>
+                                        Opp Gujarat University,<br>
+                                        Navrangpura, Ahmedabad - 380015.<br>
+                                        GUJARAT INDIA</P>
+                                        <div class="wrapper">
+                                            <a href="https://www.instagram.com/ldceofficial/" class="icon"><i class="fa-brands fa-instagram"><img src="../resources/logo-social/instagram-removebg-preview.png" style="height: 20px;"></i></a>
+                                            <a href="https://in.linkedin.com/school/l.d-college-of-engineering---ahmedabad/" class="icon"><i class="fa-brands fa-linkedin-in"><img src="../resources/logo-social/linkedin-removebg-preview.png" style="height: 20px;"></i></a>
+                                            <a href="https://www.youtube.com/c/LDCollegeofEngineering/videos" class="icon"><i class="fa-brands fa-youtube"><img src="../resources/logo-social/youtube-removebg-preview.png" style="height: 20px;"></i></a>
+                                            <a href="https://www.facebook.com/ldce.ac.in" class="icon"><i class="fa-brands fa-x-twitter"><img src="../resources/logo-social/facebook-removebg-preview.png" style="height: 20px;"></i></a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        <script src="../js/feculty-script.js"></script>
+</body>
+
+</html>
