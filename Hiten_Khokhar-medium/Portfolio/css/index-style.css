@@ -1,0 +1,46 @@
+/* rgba(33,156,160,255) */
+body{
+    background-color: black;
+    z-index: -10000;
+}
+
+.custom-navbar{
+    padding: 10px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.custom-navbar a{
+    color: white;
+    transition: 0.3s ease;
+}
+
+.custom-navbar a:hover {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.custom-navbar a .navbar-brand-name{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+
+.navbar-brand img{
+    height: 50px;
+    width: 50px;
+    transition: height 0.3s ease, width 0.3s ease;
+}
+
+
+.custom-navbar a img:hover {
+    height: 60px;
+    width: 60px;
+}
+
+
